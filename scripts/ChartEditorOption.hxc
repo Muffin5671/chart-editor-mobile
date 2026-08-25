@@ -1,0 +1,27 @@
+import funkin.modding.module.Module;
+import funkin.modding.events.ScriptEvent;
+import funkin.ui.options.OptionsState;
+import funkin.save.Save;
+
+class ChartEditorOption extends Module
+{
+    function new()
+    {
+        super("ChartEditorOption");
+    }
+
+    function onStateChangeEvent(event:StateChangeScriptEvent)
+    {
+        super.onStateChangeEvent(event);
+        
+        if (Std.isOfType(event.targetState, OptionsState))
+        {
+            var prefs = event.targetState.optionsCodex.pages.get("preferences");
+
+            prefs.createPrefItemCheckbox("Open Chart Editor", "Mobile only", function()
+            {
+                
+            }, false);
+        }
+    }
+}
