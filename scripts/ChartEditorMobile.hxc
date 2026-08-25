@@ -1,0 +1,17 @@
+import funkin.modding.module.Module;
+import flixel.ui.FlxSprite;
+
+class ChartEditorMobile extends Module
+{
+    public function new()
+    {
+        super("ChartEditorMobile");
+    }
+
+    function create()
+    {
+        super.create();
+
+        // uh
+    }
+}
